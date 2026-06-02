@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhishek Gore — Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f7ff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(#b5d4f4 1px, transparent 1px),
+        linear-gradient(90deg, #b5d4f4 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .glow-1 {
+      position: fixed;
+      top: -80px; left: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: #b5d4f4;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .glow-2 {
+      position: fixed;
+      bottom: -60px; right: -60px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: #b5d4f4;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .card {
+      position: relative;
+      background: #ffffff;
+      border: 0.5px solid #85b7eb;
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #e6f1fb;
+      border: 0.5px solid #85b7eb;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      color: #0c447c;
+      font-family: 'Share Tech Mono', monospace;
+      margin-bottom: 1.5rem;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #378add;
+      animation: pulse 1.5s infinite;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 500;
+      color: #042c53;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .role {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 13px;
+      color: #378add;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: #378add;
+      border-radius: 2px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .message {
+      font-size: 15px;
+      color: #185fa5;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .terminal {
+      background: #042c53;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 13px;
+      color: #85b7eb;
+      text-align: left;
+      margin-bottom: 2rem;
+      border: 0.5px solid #185fa5;
+    }
+
+    .terminal .prompt { color: #378add; }
+    .terminal .success { color: #5dcaa5; }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 13px;
+      background: #378add;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      border: 0.5px solid #85b7eb;
+      color: #0c447c;
+      background: #e6f1fb;
+      transition: background 0.15s;
+    }
+
+    .link:hover { background: #b5d4f4; }
+    .link i { font-size: 15px; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 30px; }
+      .card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+
+  <main class="card">
+    <div class="badge">
+      <span class="dot"></span>
+      system status: building
+    </div>
+
+    <h1>Abhishek Gore</h1>
+    <p class="role">// cybersecurity consultant</p>
+    <div class="divider"></div>
+
+    <p class="message">Something secure and impressive is being built here. Check back soon.</p>
+
+    <div class="terminal">
+      <div><span class="prompt">~/abhishekgore.dev $ </span>deploy portfolio</div>
+      <div style="margin-top:6px;" class="success">▶ initializing build...</div>
+      <div class="success">▶ assets compiling...</div>
+      <div style="margin-top:6px;"><span class="prompt">~/abhishekgore.dev $ </span><span class="cursor"></span></div>
+    </div>
+
+    <div class="links">
+      <a class="link" href="https://www.linkedin.com/in/abhishek-gore-90a379242/" target="_blank" rel="noopener">
+        <i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn
+      </a>
+      <a class="link" href="mailto:abhishek.gore.2156@gmail.com">
+        <i class="ti ti-mail" aria-hidden="true"></i> Contact
+      </a>
+      <a class="link" href="https://github.com/abhishekgore-dev" target="_blank" rel="noopener">
+        <i class="ti ti-brand-github" aria-hidden="true"></i> GitHub
+      </a>
+    </div>
+  </main>
+</body>
+</html>
